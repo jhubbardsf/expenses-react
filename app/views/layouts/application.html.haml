@@ -1,10 +1,23 @@
 !!!
 %html
   %head
-    %meta{:content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}/
-    %title ProjectJoshHubbard
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %title= content_for?(:title) ? yield(:title) : 'Project Josh Hubbard'
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Project Josh Hubbard'}"}
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %header
+      = render 'shared/navigation'
+    %main{:role => "main"}
+      = render 'shared/messages'
+      = yield
+    %footer
+      .container
+        .row
+          .col-lg-12
+            %ul.list-inline
+              %li
+                %a{href: root_path} Home
+            %p.copyright.text-muted.small Copyright © Josh Hubbard 2016. All Rights Reserved
