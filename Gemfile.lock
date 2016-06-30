@@ -111,6 +111,8 @@ GEM
     pg (0.18.4)
     pkg-config (1.1.7)
     puma (3.4.0)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.0.rc1)
       json
     rack-test (0.6.3)
@@ -202,6 +204,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   pg (~> 0.18)
   puma (~> 3.0)
+  pundit
   rails (>= 5.0.0.rc2, < 5.1)
   sass-rails (~> 5.0)
   spring
