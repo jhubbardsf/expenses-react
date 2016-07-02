@@ -54,4 +54,7 @@ Rails.application.configure do
 
   # Set default mailer
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Set react build for dev
+  config.react.variant = :development
 end
