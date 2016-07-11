@@ -11,7 +11,7 @@ var ExpenseForm = React.createClass({
     },
     handleSubmit: function(e) {
         e.preventDefault();
-        $.post('',
+        $.post('/expenses/',
             { expense: this.state },
             function(data) {
                 this.props.handleNewExpense(data);

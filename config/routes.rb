@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#index'
   resources :users
+
+  authenticated :user do
+    root :to => 'expenses#index'
+  end
 end

@@ -7,9 +7,11 @@
           %h1 Expense Report App
           %h3 Track All Your Expenses!
           %hr.intro-divider
-          .col-xs-6.col-md-4
-            = link_to 'Sign In 1',  '#'
-          .col-xs-6.col-md-4
-            = link_to 'Something 2',  '#'
-          .col-xs-6.col-md-4
-            = link_to 'Another Thing 3', '#'
+            - if user_signed_in?
+              .col-md-12
+                = link_to 'View Expenses', expenses_path
+            - else
+              .col-md-3.col-md-offset-3
+                = link_to 'Sign Up',  new_user_session_path
+              .col-md-3
+                = link_to 'Sign In',  new_user_session_path
