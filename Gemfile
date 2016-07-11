@@ -53,3 +53,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'pundit'
 gem 'react-rails', '~> 1.0'
+gem 'jquery-ui-rails'
+
+# Bower packagesxx
+source 'https://rails-assets.org' do
+  gem 'rails-assets-moment'
+end

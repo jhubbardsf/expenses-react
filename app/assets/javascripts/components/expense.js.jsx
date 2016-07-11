@@ -48,10 +48,10 @@ var Expense = React.createClass({
                 <td>{this.props.expense.payee}</td>
                 <td>{amountFormat(this.props.expense.amount)}</td>
                 <td>
-                    <a className='btn btn-default' onClick={this.handleToggle}>
+                    <a className='btn btn-default expense-action' onClick={this.handleToggle}>
                         Edit
                     </a>
-                    <a className='btn btn-danger' onClick={this.handleDelete}>
+                    <a className='btn btn-danger expense-action' onClick={this.handleDelete}>
                         Delete
                     </a>
                 </td>
@@ -88,10 +88,10 @@ var Expense = React.createClass({
                     </input>
                 </td>
                 <td>
-                    <a className='btn btn-default' onClick={this.handleEdit}>
+                    <a className='btn btn-default expense-action' onClick={this.handleEdit}>
                         Update
                     </a>
-                    <a className='btn btn-danger' onClick={this.handleToggle}>
+                    <a className='btn btn-danger expense-action' onClick={this.handleToggle}>
                         Cancel
                     </a>
                 </td>

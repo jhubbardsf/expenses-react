@@ -1,11 +1,13 @@
 var ExpenseForm = React.createClass({
     getInitialState: function() {
-        return { description: '',
-            date: '',
+        var now = moment().format('MM/DD/YYYY');
+        return {
+            description: '',
+            date: now,
             amount: '',
             payee: '',
-            category: '',
-            }
+            category: ''
+        }
     },
     handleSubmit: function(e) {
         e.preventDefault();
@@ -29,12 +31,10 @@ var ExpenseForm = React.createClass({
     },
     render: function() {
         return(
-            <form className='form-inline' onSubmit={this.handleSubmit}>
+            <form className='form-inline new-expense' onSubmit={this.handleSubmit}>
                 <div className='form-group'>
-                    <input type='text' className='form-control'
-                           placeholder='Date' name='date'
-                           value={this.state.date} onChange={this.handleChange}>
-                    </input>
+                    <DatePicker type='text' className='form-control' name='date'
+                                defaultValue={this.state.date} onChange={this.handleChange} />
                 </div>
                 <div className='form-group'>
                     <input type='text' className='form-control'
