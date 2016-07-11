@@ -1,5 +1,4 @@
 var Expense = React.createClass({
-
     getInitialState: function() {
         return { edit: false };
     },

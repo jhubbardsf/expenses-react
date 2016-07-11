@@ -1,8 +1,9 @@
 class ExpensesController < ApplicationController
+  before_action :authenticate_user!
   before_action :current_expense, only: [:update, :destroy]
 
   def index
-    @expenses = Expense.all
+    @expenses = Expense.where(user_id: current_user)
   end
 
   def create
@@ -19,12 +20,12 @@ class ExpensesController < ApplicationController
     if @expense.update(expense_params)
       render json: @expense
     else
-      render json: @expense.errors, status: :unprocessable_entity
+      render json: @expense.errors.full_messages, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @expense = Expense.find(params[:id])
+    @expense = Expense.where(id: params[:id], user_id: current_user.id).first
     @expense.destroy
     head :no_content
   end
