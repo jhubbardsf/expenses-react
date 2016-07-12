@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   before_save :default_values
+  has_many :expenses, :dependent => :destroy
 
   def default_values
     self.role ||= 'user'
