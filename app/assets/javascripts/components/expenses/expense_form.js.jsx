@@ -1,6 +1,6 @@
 var ExpenseForm = React.createClass({
     getInitialState: function() {
-        var now = moment().format('MM/DD/YYYY');
+        var now = moment().format('YYYY-MM-DD');
         return {
             description: '',
             date: now,
@@ -33,7 +33,7 @@ var ExpenseForm = React.createClass({
         return(
             <form className='form-inline new-expense' onSubmit={this.handleSubmit}>
                 <div className='form-group'>
-                    <DatePicker type='text' className='form-control' name='date'
+                    <DatePicker type='text' className='form-control' name='date' dateFormat='yy-mm-dd'
                                 defaultValue={this.state.date} onChange={this.handleChange} />
                 </div>
                 <div className='form-group'>

@@ -62,9 +62,8 @@ var Expense = React.createClass({
         return(
             <tr>
                 <td>
-                    <input className='form-control' type='text'
-                           defaultValue={this.props.expense.date} ref='date'>
-                    </input>
+                    <DatePicker type='text' className='form-control' ref='date' dateFormat='yy-mm-dd'
+                                defaultValue={this.props.expense.date} />
                 </td>
                 <td>
                     <input className='form-control' type='text'

@@ -41,7 +41,7 @@ var FlashMessages = React.createClass({
 function handleFlashMessagesHeader(node, xhr) {
     var _message_array = new Array();
     var _raw_messages = xhr.responseJSON;
-    if (_raw_messages && (xhr.status != 200 || xhr.status != 204)) {
+    if (_raw_messages && xhr.status != 200 && xhr.status != 204) {
         // var _json_messages = JSON.parse(_raw_messages);
         count = 0;
         for (var key in _raw_messages) {
