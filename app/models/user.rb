@@ -7,6 +7,11 @@ class User < ApplicationRecord
   before_save :default_values
   has_many :expenses, :dependent => :destroy
 
+
+  def self.roles
+    %w(user manager admin)
+  end
+
   def default_values
     self.role ||= 'user'
   end
