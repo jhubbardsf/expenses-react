@@ -35,7 +35,7 @@ db/*.sqlite3
 rerun.txt
 pickle-email-*.html
 .zeus.sock
-/config/secrets.yml
+#/config/secrets.yml
 .ruby-gemset
 .ruby-version
 
