@@ -54,6 +54,9 @@ gem 'devise'
 gem 'pundit'
 gem 'react-rails', '~> 1.0'
 gem 'jquery-ui-rails'
+gem 'unicorn'
+gem 'rack-timeout'
+gem 'foreman'
 
 # Bower packagesxx
 source 'https://rails-assets.org' do
