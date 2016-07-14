@@ -49,3 +49,4 @@ Users can modify their own expenses and their own user account. Managers can mod
 ## TODO
 
 1. Create API documentation
+2. Make user index more responsive

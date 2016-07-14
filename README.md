@@ -1,6 +1,6 @@
 # Expense Reporting Application
 
-This is a simple application where users can create accounts and record their expenses. 
+This is a simple application where users can create accounts and record their expenses.
 
 ## Live Sample App
 
@@ -49,3 +49,4 @@ Users can modify their own expenses and their own user account. Managers can mod
 ## TODO
 
 1. Create API documentation
+2. Make user index more responsive
