@@ -45,3 +45,7 @@ Seed.rb automatically creates three users with three different roles.
 
 
 Users can modify their own expenses and their own user account. Managers can modify their own expenses, account, and other user accounts. Admins can modify any record through the API.
+
+## TODO
+
+1. Create API documentation
