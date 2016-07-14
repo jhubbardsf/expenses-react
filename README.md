@@ -1,24 +1,16 @@
-# README
+# Expense Reporting Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple application where users can create accounts and record their expenses. 
 
-Things you may want to cover:
+## Server requirements
 
-* Ruby version
+* NodeJS
+* PostgreSQL
 
-* System dependencies
+## Installation
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone git repository
+2. Set environment variable DATABASE_URL to your production PostgreSQL URL (modify user/pass for development mode)
+3. Run bundle installer
+4. Setup database using `rake db:setup`
+5. Type `rails s` in console to run development server
