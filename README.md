@@ -31,17 +31,17 @@ This is a simple application where users can create accounts and record their ex
 
 Seed.rb automatically creates three users with three different roles.
 
-*Role: user
-*Email: user@expenses.com
-*Password: Password12345
+**Role: user**
+* Email: user@expenses.com
+* Password: Password12345
 
-*Role: manager
-*Email: manager@expenses.com
-*Password: Password12345
+**Role: manager**
+* Email: manager@expenses.com
+* Password: Password12345
 
-*Role: admin
-*Email: admin@expenses.com
-*Password: Password12345
+**Role: admin**
+* Email: admin@expenses.com
+* Password: Password12345
 
 
 Users can modify their own expenses and their own user account. Managers can modify their own expenses, account, and other user accounts. Admins can modify any record through the API.
